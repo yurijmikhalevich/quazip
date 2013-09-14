@@ -94,7 +94,7 @@ bool JlCompress::compressSubDir(QuaZip* zip, QString dir, QString origDir, bool 
     // Se comprimo anche le sotto cartelle
     if (recursive) {
         // Per ogni sotto cartella
-        QFileInfoList files = directory.entryInfoList(QDir::AllDirs | QDir::NoDotDot);
+        QFileInfoList files = directory.entryInfoList(QDir::AllDirs | QDir::NoDotAndDotDot);
         Q_FOREACH (QFileInfo file, files) {
             // Comprimo la sotto cartella
             if(!compressSubDir(zip,file.absoluteFilePath(),origDir,recursive)) return false;
