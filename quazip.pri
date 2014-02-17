@@ -21,3 +21,5 @@ SOURCES += $$PWD/qioapi.cpp \
            $$PWD/quazipnewinfo.cpp \
            $$PWD/unzip.c \
            $$PWD/zip.c
+
+LIBS += -lz
