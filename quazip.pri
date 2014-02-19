@@ -11,7 +11,8 @@ HEADERS += $$PWD/crypt.h \
            $$PWD/quazipfileinfo.h \
            $$PWD/quazipnewinfo.h \
            $$PWD/unzip.h \
-           $$PWD/zip.h
+           $$PWD/zip.h \
+           $$PWD/quazip_global.h
 SOURCES += $$PWD/qioapi.cpp \
            $$PWD/JlCompress.cpp \
            $$PWD/quaadler32.cpp \
@@ -23,3 +24,5 @@ SOURCES += $$PWD/qioapi.cpp \
            $$PWD/zip.c
 
 LIBS += -lz
+
+DEFINES += "QUAZIP_STATIC"
